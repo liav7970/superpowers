@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מספרת אלי מור | מספרה בנשר – קביעת תור אונליין</title>
+<meta name="description" content="מספרת אלי מור בנשר: תספורת גברים, פייד, עיצוב זקן ותספורת ילדים. קובעים תור אונליין או בוואטסאפ.">
+<meta name="theme-color" content="#16130f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== פלטה: דיו, נייר, אדום ספרים, כחול פלדה, פליז ===== */
+  :root{
+    --bg:#f4efe6;
+    --surface:#ebe4d7;
+    --ink:#16130f;
+    --muted:#5b544a;
+    --line:#d3c9b8;
+    --red:#b81f28;
+    --blue:#1f4e8c;
+    --brass:#9a7640;
+    --on-red:#fff;
+    --ph-bg:#fff6d6;
+    --ph-ink:#6b5200;
+    --display:"Karantina","Arial Narrow","Heebo",sans-serif;
+    --body:"Heebo","Assistant","Arial",sans-serif;
+    --wrap:1120px;
+    --pad:clamp(16px,4vw,32px);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#121110;
+      --surface:#1c1a17;
+      --ink:#efe8dc;
+      --muted:#b3aa9c;
+      --line:#38332c;
+      --red:#e2464f;
+      --blue:#7aa3e0;
+      --brass:#c9a46a;
+      --on-red:#fff;
+      --ph-bg:#2e2710;
+      --ph-ink:#f0d27a;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0;line-height:1.05}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,72px);letter-spacing:.5px}
+  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+  section{padding-block:clamp(56px,9vw,104px)}
+  .eyebrow{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--red);margin-bottom:8px}
+  .section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:36px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+  .section-head p{margin:0;color:var(--muted);max-width:42ch}
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+  /* ממלא מקום – מסומן בבירור */
+  .ph{background:var(--ph-bg);color:var(--ph-ink);outline:1.5px dashed currentColor;outline-offset:1px;padding:0 .3em;border-radius:2px;font-weight:500}
+
+  /* כפתורים */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;font:700 17px/1 var(--body);text-decoration:none;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);border-color:var(--red);color:var(--on-red)}
+  .btn-ink{background:var(--ink);color:var(--bg)}
+  .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* ===== כותרת עליונה ===== */
+  .topbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+  .logo{font-family:var(--display);font-size:34px;font-weight:700;text-decoration:none;line-height:1;white-space:nowrap}
+  .logo b{color:var(--red);font-weight:700}
+  .nav{display:flex;gap:22px;font-weight:500;font-size:16px}
+  .nav a{text-decoration:none;color:var(--muted)}
+  .nav a:hover{color:var(--ink)}
+  @media (max-width:860px){.nav{display:none}}
+
+  /* ===== Hero ===== */
+  .hero{padding-block:clamp(40px,7vw,88px) clamp(48px,8vw,96px);position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+  .hero-kicker{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-weight:500;color:var(--muted);margin-bottom:10px}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(88px,19vw,220px);line-height:.82;letter-spacing:-1px}
+  .hero h1 span{display:block;font-size:.42em;letter-spacing:1px;color:var(--red);line-height:1}
+  .hero p.lead{font-size:clamp(18px,2.2vw,22px);max-width:34ch;margin:22px 0 28px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .status{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;padding:4px 12px;border:1.5px solid currentColor}
+  .status::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
+  .status.open{color:#1f7a3f}
+  .status.closed{color:var(--red)}
+  @media (prefers-color-scheme:dark){.status.open{color:#5ccf86}}
+
+  /* רגע העיצוב: עמוד ספרים מסתובב */
+  .pole{width:96px;display:flex;flex-direction:column;align-items:center;margin-inline-end:24px}
+  .pole-cap{width:72px;height:26px;background:var(--brass);border-radius:36px 36px 4px 4px}
+  .pole-cap.bottom{border-radius:4px 4px 36px 36px}
+  .pole-ring{width:84px;height:10px;background:var(--brass);filter:brightness(.85)}
+  .pole-glass{width:64px;height:380px;position:relative;overflow:hidden;border-inline:3px solid var(--brass);
+    background:repeating-linear-gradient(-45deg,#c8232c 0 22px,#fbf8f2 22px 44px,#1f4e8c 44px 66px,#fbf8f2 66px 88px);
+    background-size:100% 249px;animation:spin 2.4s linear infinite}
+  .pole-glass::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(255,255,255,.35) 35%,rgba(255,255,255,0) 55%,rgba(0,0,0,.3))}
+  @keyframes spin{to{background-position:0 249px}}
+  .stripe{display:none;height:12px;background:repeating-linear-gradient(-45deg,#c8232c 0 12px,#fbf8f2 12px 24px,#1f4e8c 24px 36px,#fbf8f2 36px 48px);background-size:68px 100%;animation:slide 2s linear infinite}
+  @keyframes slide{to{background-position:68px 0}}
+  @media (max-width:760px){
+    .hero .wrap{grid-template-columns:1fr}
+    .pole{display:none}
+    .stripe{display:block}
+  }
+
+  /* ===== שירותים – מחירון ===== */
+  .menu{list-style:none;margin:0;padding:0}
+  .menu li{display:grid;grid-template-columns:1fr auto auto;gap:6px 20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+  .menu h3{font-size:22px;font-weight:800}
+  .menu .desc{grid-column:1;color:var(--muted);font-size:15px;margin:0}
+  .menu .meta{grid-column:2;grid-row:1 / span 2;text-align:center;font-size:15px;color:var(--muted);white-space:nowrap}
+  .menu .price{display:block;font-family:var(--display);font-size:38px;line-height:1;color:var(--ink);font-weight:700}
+  .menu .btn{grid-column:3;grid-row:1 / span 2;min-height:44px;padding:0 16px;font-size:16px}
+  @media (max-width:560px){
+    .menu li{grid-template-columns:1fr auto}
+    .menu .meta{grid-column:2;grid-row:1 / span 2}
+    .menu .btn{grid-column:1 / -1;grid-row:auto;justify-self:start}
+  }
+
+  /* ===== קביעת תור ===== */
+  #booking{background:var(--surface)}
+  .steps{list-style:none;margin:0 0 28px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;counter-reset:s}
+  .steps li{counter-increment:s;font-size:14px;font-weight:500;color:var(--muted);border-top:4px solid var(--line);padding-top:8px;min-width:0}
+  .steps li::before{content:counter(s) ". "}
+  .steps li.done{border-color:var(--ink);color:var(--ink)}
+  .steps li.current{border-color:var(--red);color:var(--ink);font-weight:800}
+  @media (max-width:560px){.steps li{font-size:0}.steps li::before{font-size:14px}.steps li.current{font-size:13px}}
+  .panel{background:var(--bg);border:2px solid var(--ink);padding:clamp(18px,3.5vw,32px)}
+  .panel h3{font-size:24px;font-weight:800;margin-bottom:18px}
+  .choices{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .choice{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:start;padding:14px 16px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:inherit;cursor:pointer;min-height:48px}
+  .choice:hover{border-color:var(--ink)}
+  .choice[aria-pressed="true"]{border-color:var(--red);box-shadow:inset 0 0 0 1.5px var(--red);background:color-mix(in srgb,var(--red) 7%,transparent)}
+  .choice strong{font-size:18px}
+  .choice small{color:var(--muted);font-size:14px}
+  .dates{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+  .dates .choice{align-items:center;text-align:center;padding:10px 6px}
+  .dates .choice strong{font-family:var(--display);font-size:30px;line-height:1}
+  .times{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(86px,1fr))}
+  .times .choice{align-items:center;padding:10px 6px}
+  .choice:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+  .legend{font-size:14px;color:var(--muted);margin:14px 0 0}
+  .field{display:grid;gap:6px;margin-bottom:16px;max-width:420px}
+  .field label{font-weight:700}
+  .field input{font:inherit;min-height:48px;padding:8px 12px;border:1.5px solid var(--ink);background:var(--bg);color:var(--ink);border-radius:0;width:100%}
+  .field .err{color:var(--red);font-size:14px;min-height:1.2em}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;justify-content:space-between}
+  .summary{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 20px}
+  .summary dt{color:var(--muted)}
+  .summary dd{margin:0;font-weight:700}
+  .note{font-size:14px;color:var(--muted);margin-top:16px}
+  .done-mark{font-family:var(--display);font-size:64px;color:var(--red);line-height:1;margin-bottom:6px}
+  .empty{color:var(--muted);margin:0}
+
+  /* ===== ביקורות (תבנית) ===== */
+  .rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+  .reviews{display:grid;gap:0;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .review{padding:24px 20px 24px 0;border-bottom:1px solid var(--line);margin:0}
+  .review + .review{padding-inline-start:20px;border-inline-start:1px solid var(--line)}
+  .review blockquote{margin:0 0 14px;font-size:18px}
+  .review figcaption{font-weight:700;font-size:15px}
+  .review .stars{color:var(--brass);letter-spacing:2px;margin-bottom:10px;font-size:14px}
+  @media (max-width:760px){.reviews{grid-template-columns:1fr}.review + .review{padding-inline-start:0;border-inline-start:0}.review{padding-inline:0}}
+
+  /* ===== גלריה ===== */
+  .gallery{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+  .gallery figure{margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--surface)}
+  .gallery figure:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+  .gallery img{width:100%;height:100%;object-fit:cover}
+  .gallery .slot{height:100%;display:grid;place-items:center;text-align:center;padding:12px;border:2px dashed var(--line);color:var(--muted);font-size:15px;
+    background:repeating-linear-gradient(-45deg,transparent 0 14px,color-mix(in srgb,var(--line) 40%,transparent) 14px 15px)}
+  @media (max-width:560px){.gallery{grid-template-columns:1fr 1fr}.gallery figure:nth-child(1){grid-row:auto;grid-column:1 / -1;aspect-ratio:16/10}}
+
+  /* ===== שעות ומיקום ===== */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+  @media (max-width:760px){.visit{grid-template-columns:1fr}}
+  .hours{width:100%;border-collapse:collapse;font-size:17px}
+  .hours th,.hours td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:start;font-weight:400}
+  .hours td{text-align:end}
+  .hours tr.today th,.hours tr.today td{font-weight:800;color:var(--red)}
+  .hours tr.today th::after{content:" · היום";font-weight:500;font-size:14px}
+  .visit h3{font-size:22px;font-weight:800;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .address{font-size:20px;margin:0 0 16px}
+  .map-slot{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;padding:16px;border:2px dashed var(--line);color:var(--muted);margin-bottom:16px;
+    background:repeating-linear-gradient(0deg,transparent 0 39px,var(--line) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,var(--line) 39px 40px)}
+  .map-img{width:100%;aspect-ratio:16/10;object-fit:cover;margin-bottom:16px}
+  .row{display:flex;flex-wrap:wrap;gap:10px}
+
+  /* ===== פוטר ===== */
+  footer{background:var(--ink);color:var(--bg);padding-block:40px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+  footer .logo b{color:#e2464f}
+  footer nav{display:flex;flex-wrap:wrap;gap:16px}
+  footer small{opacity:.7}
+
+  /* ===== וואטסאפ צף + סרגל תחתון בטלפון ===== */
+  .wa-float{position:fixed;left:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .wa-float svg{width:30px;height:30px}
+  .mbar{display:none}
+  @media (max-width:760px){
+    body{padding-bottom:72px}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset-inline:0;bottom:0;z-index:40;background:var(--ink);padding:8px 16px calc(8px + env(safe-area-inset-bottom));gap:8px}
+    .mbar .btn{min-height:48px;border-color:var(--bg);color:var(--bg)}
+    .mbar .btn-red{border-color:var(--red);color:#fff}
+    .wa-float{bottom:84px;left:16px;width:52px;height:52px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#top">מספרת <b>אלי מור</b></a>
+    <nav class="nav" aria-label="ניווט ראשי">
+      <a href="#services">שירותים</a>
+      <a href="#booking">קביעת תור</a>
+      <a href="#reviews">ביקורות</a>
+      <a href="#gallery">גלריה</a>
+      <a href="#visit">שעות ומיקום</a>
+    </nav>
+    <a class="btn btn-red" href="#booking" style="min-height:42px;padding:0 16px;font-size:16px">קבע תור</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <div class="hero-kicker">
+          <span>מספרה לגברים · <span data-city></span></span>
+          <span class="status" id="status-hero" role="status"></span>
+        </div>
+        <h1 id="hero-title"><span>מספרת</span>אלי מור</h1>
+        <p class="lead">תספורת, פייד וזקן. בוחרים שירות ושעה פנויה, וזהו.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-red" href="#booking">קבע תור</a>
+          <a class="btn" data-wa target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+            וואטסאפ
+          </a>
+        </div>
+      </div>
+      <div class="pole" aria-hidden="true">
+        <div class="pole-cap"></div><div class="pole-ring"></div>
+        <div class="pole-glass"></div>
+        <div class="pole-ring"></div><div class="pole-cap bottom"></div>
+      </div>
+    </div>
+  </section>
+  <div class="stripe" aria-hidden="true"></div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">מחירון</span><h2 id="services-title">שירותים</h2></div>
+        <p>משך הזמן משוער. אפשר לבחור שירות ולעבור ישר לקביעת תור.</p>
+      </div>
+      <ul class="menu" id="menu"></ul>
+    </div>
+  </section>
+
+  <section id="booking" aria-labelledby="booking-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">5 צעדים קצרים</span><h2 id="booking-title">קביעת תור</h2></div>
+        <p>בסוף שולחים את פרטי התור בוואטסאפ למספרה.</p>
+      </div>
+      <ol class="steps" id="steps">
+        <li>שירות</li><li>תאריך</li><li>שעה</li><li>פרטים</li><li>אישור</li>
+      </ol>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">מה אומרים עלינו</span><h2 id="reviews-title">ביקורות</h2></div>
+        <div class="rating-box" id="rating-box"></div>
+      </div>
+      <div class="reviews" id="reviews-list"></div>
+      <p style="margin-top:28px"><a class="btn" id="reviews-link" target="_blank" rel="noopener">לכל הביקורות בגוגל</a></p>
+    </div>
+  </section>
+
+  <section id="gallery" aria-labelledby="gallery-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">מהכיסא</span><h2 id="gallery-title">גלריה</h2></div>
+      </div>
+      <div class="gallery" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <section id="visit" aria-labelledby="visit-title" style="background:var(--surface)">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">מתי ואיפה</span><h2 id="visit-title">שעות ומיקום</h2></div>
+      </div>
+      <div class="visit">
+        <div>
+          <h3>שעות פתיחה <span class="status" id="status-hours"></span></h3>
+          <table class="hours" id="hours"><caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">שעות פתיחה</caption><tbody></tbody></table>
+          <p class="note" id="hours-note" hidden></p>
+        </div>
+        <div>
+          <h3>איך מגיעים</h3>
+          <p class="address" id="address"></p>
+          <div id="map"></div>
+          <div class="row">
+            <a class="btn btn-ink" id="waze" target="_blank" rel="noopener">ניווט ב-Waze</a>
+            <a class="btn" id="gmaps" target="_blank" rel="noopener">Google Maps</a>
+            <a class="btn" data-tel>התקשרו <span class="ltr" data-phone></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top">מספרת <b>אלי מור</b></a><br>
+      <small><span data-address></span> · <a data-tel class="ltr" style="text-decoration:none"><span data-phone></span></a></small>
+    </div>
+    <nav id="social" aria-label="רשתות חברתיות"></nav>
+    <small>© <span id="year"></span> מספרת אלי מור</small>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<div class="mbar">
+  <a class="btn btn-red" href="#booking">קביעת תור</a>
+  <a class="btn" data-tel>התקשרו</a>
+</div>
+
+<script>
+/* =====================================================================
+   הגדרות העסק – כאן עורכים הכל. אין צורך לגעת בשאר הקוד.
+   כל ערך שמתחיל ב-"[" או שמכיל 050-000-0000 / ₪— הוא ממלא מקום
+   ויוצג באתר עם מסגרת צהובה מקווקוות עד שיוחלף.
+   ===================================================================== */
+const CONFIG = {
+  name: "מספרת אלי מור",
+  city: "נשר",
+
+  // טלפון כפי שיוצג באתר
+  phone: "050-000-0000",
+  // מספר וואטסאפ בפורמט בינלאומי, ספרות בלבד, בלי 0 בהתחלה (למשל 972521234567)
+  whatsapp: "972500000000",
+
+  // כתובת מלאה – משמשת גם לקישורי Waze ו-Google Maps
+  address: "[כתובת מלאה], נשר",
+
+  // תמונת מפה (צילום מסך של המפה) – אופציונלי. ריק = מוצג ממלא מקום
+  mapImage: "",
+
+  // שעות פתיחה: 0=ראשון ... 6=שבת. כל יום = רשימת טווחים ["פתיחה","סגירה"]. יום סגור = []
+  // אפשר יותר מטווח אחד ביום, למשל [["09:00","13:00"],["16:00","20:00"]]
+  // שימו לב: השעות כאן הן דוגמה בלבד! הן גם קובעות אילו שעות פנויות מוצגות בקביעת התור.
+  hoursArePlaceholder: true,   // לשנות ל-false אחרי שמעדכנים את השעות האמיתיות
+  hours: {
+    0: [["09:00","20:00"]],
+    1: [["09:00","20:00"]],
+    2: [["09:00","20:00"]],
+    3: [["09:00","20:00"]],
+    4: [["09:00","20:00"]],
+    5: [["08:00","14:00"]],
+    6: []
+  },
+
+  // שירותים: duration בדקות (משוער), price כטקסט חופשי (למשל "₪60")
+  services: [
+    { id:"cut",   name:"תספורת גברים",   desc:"מכונה ומספריים, כולל סידור.",        duration:30, price:"₪—" },
+    { id:"fade",  name:"תספורת פייד",    desc:"מעבר חלק בצדדים ובגב.",              duration:40, price:"₪—" },
+    { id:"beard", name:"עיצוב זקן",       desc:"קיצור, קווים וסידור.",               duration:20, price:"₪—" },
+    { id:"kids",  name:"תספורת ילדים",   desc:"תספורת לילדים.",                    duration:30, price:"₪—" },
+    { id:"combo", name:"תספורת + זקן",   desc:"תספורת ועיצוב זקן בתור אחד.",        duration:50, price:"₪—" }
+  ],
+
+  booking: {
+    daysAhead: 14,     // כמה ימים קדימה אפשר לקבוע
+    slotStep: 30,      // כל כמה דקות מתחיל תור
+    leadMinutes: 60    // כמה זמן מראש לפחות (להיום)
+  },
+
+  // ביקורות – תבנית בלבד. להחליף בציטוטים אמיתיים מגוגל (בהסכמת הכותבים) או enabled:false להסתרת המקטע
+  reviews: {
+    enabled: true,
+    rating: "[דירוג כללי בגוגל]",       // למשל "4.8"
+    count: "[מספר ביקורות]",            // למשל "57"
+    googleUrl: "",                      // קישור לדף הביקורות בגוגל
+    items: [
+      { name:"[שם הלקוח]", text:"[כאן תופיע ביקורת אמיתית מגוגל]", stars:null },
+      { name:"[שם הלקוח]", text:"[כאן תופיע ביקורת אמיתית מגוגל]", stars:null },
+      { name:"[שם הלקוח]", text:"[כאן תופיע ביקורת אמיתית מגוגל]", stars:null }
+    ]
+  },
+
+  // גלריה: src = נתיב/קישור לתמונה, alt = תיאור קצר. src ריק = מוצג ממלא מקום
+  gallery: [
+    { src:"", alt:"תמונה 1 – למשל חזית המספרה" },
+    { src:"", alt:"תמונה 2 – תספורת פייד" },
+    { src:"", alt:"תמונה 3 – עיצוב זקן" },
+    { src:"", alt:"תמונה 4 – תספורת" },
+    { src:"", alt:"תמונה 5 – פנים המספרה" }
+  ],
+
+  // רשתות חברתיות – קישור מלא. ריק = לא מוצג
+  social: { instagram:"", facebook:"", tiktok:"" }
+};
+
+/* =====================================================================
+   מכאן והלאה – קוד. אין צורך לערוך.
+   ===================================================================== */
+const DAYS = ["ראשון","שני","שלישי","רביעי","חמישי","שישי","שבת"];
+const DAYS_SHORT = ["א׳","ב׳","ג׳","ד׳","ה׳","ו׳","ש׳"];
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const isPh = v => !v || /\[|000-0000|0000000|₪—/.test(String(v));
+const show = v => isPh(v) ? `<span class="ph">${esc(v || "[חסר]")}</span>` : esc(v);
+const toMin = t => { const [h,m] = t.split(":").map(Number); return h*60+m; };
+const fmt = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
+const ymd = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const dayLabel = d => `יום ${DAYS[d.getDay()]}, ${d.getDate()}.${d.getMonth()+1}`;
+const waLink = text => `https://wa.me/${CONFIG.whatsapp}${text ? "?text="+encodeURIComponent(text) : ""}`;
+
+/* ---- פרטים כלליים ---- */
+function fillBasics(){
+  $$("[data-city]").forEach(e => e.innerHTML = show(CONFIG.city));
+  $$("[data-phone]").forEach(e => e.innerHTML = show(CONFIG.phone));
+  $$("[data-address]").forEach(e => e.innerHTML = show(CONFIG.address));
+  $$("[data-tel]").forEach(e => e.href = "tel:" + CONFIG.phone.replace(/[^\d+]/g,""));
+  $$("[data-wa]").forEach(e => e.href = waLink(`שלום, אשמח לקבוע תור ב${CONFIG.name}`));
+  $("#address").innerHTML = show(CONFIG.address);
+  const q = encodeURIComponent(CONFIG.address);
+  $("#waze").href = `https://waze.com/ul?q=${q}&navigate=yes`;
+  $("#gmaps").href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+  $("#map").innerHTML = CONFIG.mapImage
+    ? `<img class="map-img" src="${esc(CONFIG.mapImage)}" alt="מפה: ${esc(CONFIG.address)}" loading="lazy">`
+    : `<div class="map-slot"><span class="ph">[מקום שמור למפה – צילום מסך של המיקום]</span></div>`;
+  $("#year").textContent = new Date().getFullYear();
+  const names = {instagram:"Instagram", facebook:"Facebook", tiktok:"TikTok"};
+  $("#social").innerHTML = Object.entries(CONFIG.social).filter(([,u]) => u)
+    .map(([k,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${names[k]||k}</a>`).join("");
+}
+
+/* ---- שעות פתיחה + פתוח עכשיו ---- */
+function rangesFor(day){ return (CONFIG.hours[day] || []).map(([a,b]) => [toMin(a), toMin(b)]); }
+function openStatus(now = new Date()){
+  const cur = now.getHours()*60 + now.getMinutes();
+  for (const [a,b] of rangesFor(now.getDay())) if (cur >= a && cur < b) return { open:true, text:`פתוח עכשיו · עד ${fmt(b)}` };
+  for (let i = 0; i < 8; i++){
+    const day = (now.getDay()+i) % 7;
+    for (const [a] of rangesFor(day)){
+      if (i === 0 && a <= cur) continue;
+      const when = i === 0 ? "היום" : i === 1 ? "מחר" : `ביום ${DAYS[day]}`;
+      return { open:false, text:`סגור · נפתח ${when} ב-${fmt(a)}` };
+    }
+  }
+  return { open:false, text:"סגור" };
+}
+function renderHours(){
+  const today = new Date().getDay();
+  $("#hours tbody").innerHTML = DAYS.map((d,i) => {
+    const r = CONFIG.hours[i] || [];
+    const val = r.length ? r.map(([a,b]) => `<span class="ltr">${a}–${b}</span>`).join(", ") : "סגור";
+    return `<tr class="${i===today?"today":""}"${i===today?' aria-current="date"':""}><th scope="row">${d}</th><td>${val}</td></tr>`;
+  }).join("");
+  const st = openStatus();
+  ["#status-hero","#status-hours"].forEach(s => { const e = $(s); e.textContent = st.text; e.className = "status " + (st.open ? "open" : "closed"); });
+  if (CONFIG.hoursArePlaceholder){
+    const n = $("#hours-note"); n.hidden = false;
+    n.innerHTML = `<span class="ph">[שעות לדוגמה בלבד – יש לעדכן ב-CONFIG.hours]</span>`;
+  }
+}
+
+/* ---- מחירון ---- */
+function renderMenu(){
+  $("#menu").innerHTML = CONFIG.services.map(s => `
+    <li>
+      <h3>${esc(s.name)}</h3>
+      <p class="desc">${esc(s.desc)}</p>
+      <div class="meta"><span class="price">${show(s.price)}</span>כ-${s.duration} דק׳</div>
+      <button class="btn" type="button" data-book="${esc(s.id)}">לקביעת תור</button>
+    </li>`).join("");
+  $$("[data-book]").forEach(b => b.addEventListener("click", () => {
+    state.serviceId = b.dataset.book; state.date = null; state.start = null;
+    go(2); $("#booking").scrollIntoView();
+  }));
+}
+
+/* ---- ביקורות (תבנית) ---- */
+function renderReviews(){
+  const R = CONFIG.reviews;
+  if (!R.enabled){ $("#reviews").hidden = true; $$('a[href="#reviews"]').forEach(a => a.hidden = true); return; }
+  $("#rating-box").innerHTML = `<span>דירוג בגוגל: <strong>${show(R.rating)}</strong></span><span>${show(R.count)} ביקורות</span>`;
+  $("#reviews-list").innerHTML = R.items.map(it => `
+    <figure class="review">
+      <div class="stars">${typeof it.stars === "number" ? "★".repeat(it.stars) + "☆".repeat(5-it.stars) : '<span class="ph">[דירוג]</span>'}</div>
+      <blockquote>${show(it.text)}</blockquote>
+      <figcaption>${show(it.name)}</figcaption>
+    </figure>`).join("");
+  const link = $("#reviews-link");
+  if (R.googleUrl) link.href = R.googleUrl;
+  else { link.href = "#reviews"; link.removeAttribute("target"); link.insertAdjacentHTML("beforeend", ' <span class="ph">[קישור חסר]</span>'); }
+}
+
+/* ---- גלריה ---- */
+function renderGallery(){
+  $("#gallery-grid").innerHTML = CONFIG.gallery.map(g => `<figure>${
+    g.src ? `<img src="${esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`
+          : `<div class="slot"><span><span class="ph">[מקום שמור לתמונה]</span><br>${esc(g.alt)}</span></div>`
+  }</figure>`).join("");
+}
+
+/* =====================================================================
+   מערכת התורים – צד לקוח בלבד!
+   התורים נשמרים רק ב-localStorage של הדפדפן של הלקוח עצמו.
+   אין שרת: בעל העסק לא רואה את התורים באתר, אלא רק דרך הודעת הוואטסאפ
+   שהלקוח שולח בסוף. חסימת שעות תפוסות עובדת רק באותו דפדפן.
+   לניהול תורים אמיתי (יומן משותף, תזכורות) צריך מערכת תורים חיצונית או שרת.
+   ===================================================================== */
+const STORE_KEY = "eliMor.bookings.v1";
+function loadBookings(){
+  try {
+    const list = JSON.parse(localStorage.getItem(STORE_KEY) || "[]");
+    const today = ymd(new Date());
+    return Array.isArray(list) ? list.filter(b => b && b.date >= today) : [];
+  } catch (e) { return []; }
+}
+function saveBookings(list){
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(list)); return true; } catch (e) { return false; }
+}
+
+const state = { step:1, serviceId:null, date:null, start:null, name:"", phone:"", done:null };
+const svc = id => CONFIG.services.find(s => s.id === id);
+
+function availableDays(){
+  const out = [], base = new Date(); base.setHours(0,0,0,0);
+  for (let i = 0; i < CONFIG.booking.daysAhead; i++){
+    const d = new Date(base); d.setDate(base.getDate()+i);
+    out.push({ d, key: ymd(d), hasSlots: slotsFor(ymd(d), d).some(s => s.free) });
+  }
+  return out;
+}
+function slotsFor(key, d){
+  const s = svc(state.serviceId); if (!s) return [];
+  const taken = loadBookings().filter(b => b.date === key);
+  const now = new Date(), isToday = key === ymd(now);
+  const minStart = isToday ? now.getHours()*60 + now.getMinutes() + CONFIG.booking.leadMinutes : -1;
+  const out = [];
+  for (const [a,b] of rangesFor(d.getDay())){
+    for (let t = a; t + s.duration <= b; t += CONFIG.booking.slotStep){
+      if (t < minStart) continue;
+      const clash = taken.some(x => t < x.start + x.duration && x.start < t + s.duration);
+      out.push({ t, free: !clash });
+    }
+  }
+  return out;
+}
+
+function go(n){ state.step = n; render(); }
+function nav(backTo, nextLabel, nextOk){
+  return `<div class="actions">
+    ${nextLabel ? `<button class="btn btn-red" type="button" data-next ${nextOk?"":"disabled"}>${nextLabel}</button>` : "<span></span>"}
+    ${backTo ? `<button class="btn" type="button" data-back="${backTo}">חזרה</button>` : ""}
+  </div>`;
+}
+function render(){
+  $$("#steps li").forEach((li,i) => {
+    li.className = state.done ? "done" : (i+1 < state.step ? "done" : i+1 === state.step ? "current" : "");
+    if (i+1 === state.step && !state.done) li.setAttribute("aria-current","step"); else li.removeAttribute("aria-current");
+  });
+  const P = $("#panel"); let h = "";
+  if (state.done){
+    const b = state.done, s = svc(b.serviceId), d = new Date(b.date+"T00:00");
+    const msg = `שלום, קבעתי תור באתר של ${CONFIG.name}:\nשירות: ${s.name}\nתאריך: ${dayLabel(d)}\nשעה: ${fmt(b.start)}\nשם: ${b.name}\nטלפון: ${b.phone}`;
+    h = `<div class="done-mark" aria-hidden="true">✓</div>
+      <h3>כמעט סיימנו – נשאר לשלוח את התור בוואטסאפ</h3>
+      <dl class="summary">${summaryRows(b)}</dl>
+      <div class="actions" style="justify-content:flex-start">
+        <a class="btn btn-red" href="${waLink(msg)}" target="_blank" rel="noopener">שליחת פרטי התור בוואטסאפ</a>
+        <button class="btn" type="button" data-new>תור חדש</button>
+      </div>
+      <p class="note">התור נשמר רק בדפדפן הזה. המספרה מקבלת אותו רק אחרי שליחת הודעת הוואטסאפ.</p>`;
+  } else if (state.step === 1){
+    h = `<h3>איזה שירות?</h3><div class="choices">${CONFIG.services.map(s =>
+      `<button type="button" class="choice" data-svc="${esc(s.id)}" aria-pressed="${state.serviceId===s.id}"><strong>${esc(s.name)}</strong><small>כ-${s.duration} דק׳ · ${show(s.price)}</small></button>`).join("")}</div>
+      ${nav(null, "המשך לבחירת תאריך", !!state.serviceId)}`;
+  } else if (state.step === 2){
+    const days = availableDays();
+    h = `<h3>באיזה יום?</h3><div class="dates">${days.map(x =>
+      `<button type="button" class="choice" data-date="${x.key}" aria-pressed="${state.date===x.key}" ${x.hasSlots?"":"disabled"} aria-label="${dayLabel(x.d)}${x.hasSlots?"":" – אין תורים"}"><small>${DAYS_SHORT[x.d.getDay()]}</small><strong>${x.d.getDate()}</strong><small>${x.d.getMonth()+1}/</small></button>`).join("")}</div>
+      <p class="legend">ימים מחוקים: סגור או שאין בהם שעות פנויות.</p>
+      ${nav(1, "המשך לבחירת שעה", !!state.date)}`;
+  } else if (state.step === 3){
+    const d = new Date(state.date+"T00:00"), slots = slotsFor(state.date, d);
+    h = `<h3>באיזו שעה? <small style="font-weight:500;color:var(--muted)">${dayLabel(d)}</small></h3>
+      ${slots.length ? `<div class="times">${slots.map(x =>
+        `<button type="button" class="choice" data-time="${x.t}" aria-pressed="${state.start===x.t}" ${x.free?"":"disabled"} aria-label="${fmt(x.t)}${x.free?"":" – תפוס"}"><strong class="ltr">${fmt(x.t)}</strong></button>`).join("")}</div>
+        <p class="legend">שעות מחוקות כבר תפוסות.</p>` : `<p class="empty">אין שעות פנויות ביום הזה.</p>`}
+      ${nav(2, "המשך לפרטים", state.start !== null)}`;
+  } else if (state.step === 4){
+    h = `<h3>פרטים ליצירת קשר</h3>
+      <form id="details" novalidate>
+        <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="name" autocomplete="name" required value="${esc(state.name)}"><span class="err" id="e-name" aria-live="polite"></span></div>
+        <div class="field"><label for="f-phone">טלפון נייד</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X-XXX-XXXX" required value="${esc(state.phone)}"><span class="err" id="e-phone" aria-live="polite"></span></div>
+        <div class="actions"><button class="btn btn-red" type="submit">המשך לאישור</button><button class="btn" type="button" data-back="3">חזרה</button></div>
+      </form>`;
+  } else if (state.step === 5){
+    h = `<h3>בדיקה אחרונה</h3><dl class="summary">${summaryRows(state)}</dl>
+      <div class="actions"><button class="btn btn-red" type="button" data-confirm>אישור התור</button><button class="btn" type="button" data-back="4">חזרה</button></div>
+      <p class="err" id="e-confirm" style="color:var(--red)"></p>`;
+  }
+  P.innerHTML = h;
+  bind();
+}
+function summaryRows(b){
+  const s = svc(b.serviceId), d = new Date(b.date+"T00:00");
+  return `<dt>שירות</dt><dd>${esc(s.name)} <small style="font-weight:400">(כ-${s.duration} דק׳ · ${show(s.price)})</small></dd>
+    <dt>תאריך</dt><dd>${dayLabel(d)}</dd>
+    <dt>שעה</dt><dd><span class="ltr">${fmt(b.start)}</span></dd>
+    <dt>שם</dt><dd>${esc(b.name)}</dd>
+    <dt>טלפון</dt><dd><span class="ltr">${esc(b.phone)}</span></dd>`;
+}
+function bind(){
+  const P = $("#panel");
+  $$("[data-svc]",P).forEach(b => b.onclick = () => { if (state.serviceId !== b.dataset.svc){ state.date = null; state.start = null; } state.serviceId = b.dataset.svc; render(); });
+  $$("[data-date]",P).forEach(b => b.onclick = () => { if (state.date !== b.dataset.date) state.start = null; state.date = b.dataset.date; render(); });
+  $$("[data-time]",P).forEach(b => b.onclick = () => { state.start = Number(b.dataset.time); render(); });
+  $$("[data-back]",P).forEach(b => b.onclick = () => go(Number(b.dataset.back)));
+  const next = $("[data-next]",P); if (next) next.onclick = () => go(state.step + 1);
+  const f = $("#details",P);
+  if (f) f.onsubmit = e => {
+    e.preventDefault();
+    const name = f.name.value.trim(), phone = f.phone.value.trim(), digits = phone.replace(/\D/g,"");
+    let ok = true;
+    $("#e-name").textContent = name.length >= 2 ? "" : (ok = false, "נא למלא שם");
+    $("#e-phone").textContent = /^05\d{8}$/.test(digits) ? "" : (ok = false, "נא למלא מספר נייד תקין, למשל 0521234567");
+    if (!ok) { (name.length < 2 ? f.name : f.phone).focus(); return; }
+    state.name = name; state.phone = digits.replace(/^(\d{3})(\d{3})(\d{4})$/, "$1-$2-$3"); go(5);
+  };
+  const c = $("[data-confirm]",P);
+  if (c) c.onclick = () => {
+    const d = new Date(state.date+"T00:00");
+    const still = slotsFor(state.date, d).find(x => x.t === state.start && x.free);
+    if (!still){ $("#e-confirm").textContent = "השעה הזו כבר לא פנויה. נא לבחור שעה אחרת."; state.start = null; setTimeout(() => go(3), 1200); return; }
+    const s = svc(state.serviceId);
+    const b = { id: Date.now().toString(36), date: state.date, start: state.start, duration: s.duration, serviceId: s.id, name: state.name, phone: state.phone, created: new Date().toISOString() };
+    const list = loadBookings(); list.push(b); saveBookings(list);
+    state.done = b; render();
+    P.focus?.();
+  };
+  const n = $("[data-new]",P);
+  if (n) n.onclick = () => { Object.assign(state, { step:1, serviceId:null, date:null, start:null, done:null }); render(); };
+}
+
+/* ---- הפעלה ---- */
+fillBasics(); renderHours(); renderMenu(); renderReviews(); renderGallery(); render();
+setInterval(renderHours, 60000);
+</script>
+</body>
+</html>
