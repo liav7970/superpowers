@@ -51,7 +51,7 @@
   h1,h2,h3{margin:0;line-height:1.05}
   h2{font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,72px);letter-spacing:.5px}
   .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
-  section{padding-block:clamp(56px,9vw,104px)}
+  section{padding-block:clamp(56px,9vw,104px);scroll-margin-top:64px}
   .eyebrow{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--red);margin-bottom:8px}
   .section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:36px;border-bottom:2px solid var(--ink);padding-bottom:14px}
   .section-head p{margin:0;color:var(--muted);max-width:42ch}
@@ -205,6 +205,7 @@
   /* ===== וואטסאפ צף + סרגל תחתון בטלפון ===== */
   .wa-float{position:fixed;left:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
   .wa-float svg{width:30px;height:30px}
+  @media (max-width:760px){.wa-float.away{opacity:0;pointer-events:none;visibility:hidden}}
   .mbar{display:none}
   @media (max-width:760px){
     body{padding-bottom:72px}
@@ -611,7 +612,7 @@ function render(){
   } else if (state.step === 2){
     const days = availableDays();
     h = `<h3>באיזה יום?</h3><div class="dates">${days.map(x =>
-      `<button type="button" class="choice" data-date="${x.key}" aria-pressed="${state.date===x.key}" ${x.hasSlots?"":"disabled"} aria-label="${dayLabel(x.d)}${x.hasSlots?"":" – אין תורים"}"><small>${DAYS_SHORT[x.d.getDay()]}</small><strong>${x.d.getDate()}</strong><small>${x.d.getMonth()+1}/</small></button>`).join("")}</div>
+      `<button type="button" class="choice" data-date="${x.key}" aria-pressed="${state.date===x.key}" ${x.hasSlots?"":"disabled"} aria-label="${dayLabel(x.d)}${x.hasSlots?"":" – אין תורים"}"><small>${DAYS_SHORT[x.d.getDay()]}</small><strong>${x.d.getDate()}</strong><small>${x.d.toLocaleDateString("he-IL",{month:"short"})}</small></button>`).join("")}</div>
       <p class="legend">ימים מחוקים: סגור או שאין בהם שעות פנויות.</p>
       ${nav(1, "המשך לבחירת שעה", !!state.date)}`;
   } else if (state.step === 3){
@@ -679,6 +680,11 @@ function bind(){
 /* ---- הפעלה ---- */
 fillBasics(); renderHours(); renderMenu(); renderReviews(); renderGallery(); render();
 setInterval(renderHours, 60000);
+// בטלפון: מסתירים את כפתור הוואטסאפ הצף כשטופס התור על המסך, כדי שלא יכסה כפתורים
+if ("IntersectionObserver" in window){
+  const fl = $(".wa-float");
+  new IntersectionObserver(([e]) => fl.classList.toggle("away", e.isIntersecting), { threshold:0.15 }).observe($("#panel"));
+}
 </script>
 </body>
 </html>
